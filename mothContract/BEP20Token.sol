@@ -106,20 +106,19 @@ contract BEP20Token is Context, IBEP20, Ownable {
   address payable private _marketingAcc;
 
   constructor() public {
-    _name = "mothtest";
-    _symbol = "TESTMOTH";
+    _name = "moth";
+    _symbol = "MOTH";
     _decimals = 18;
     _totalSupply = 400000000000 * 10 ** 18;
     _mothMaster = address(uint160(address(this)));
-    _coreDevAcc = address(uint160(0x92b508bF870997964c270c03Ca9668e03aFE0bD5));
-    _marketingAcc = address(uint160(0xAe137987Cc60Fc5959b86621C3f77cE5A0Da4848));
+    _coreDevAcc = address(uint160(0x96c966D4a7987E2491d3324A413f54e7C8ac7572));
+    _marketingAcc = address(uint160(0x19ae043C1EA64ddFFb240B08a4cD5C1A636FAE79));
     
     _balances[msg.sender] = _totalSupply;
     emit Transfer(address(0), msg.sender, _totalSupply);
     
-    _transfer(msg.sender, _coreDevAcc, _totalSupply.mul(uint256(20)).div(uint256(100)));
-    _transfer(msg.sender, _marketingAcc, _totalSupply.mul(uint(10)).div(uint(100)));
-    
+    _transfer(msg.sender, _coreDevAcc, _totalSupply.mul(uint256(10)).div(uint256(100)));
+    _transfer(msg.sender, _marketingAcc, _totalSupply.mul(uint(5)).div(uint(100)));
   }
 
   function getOwner() external view returns (address) { return owner(); }
