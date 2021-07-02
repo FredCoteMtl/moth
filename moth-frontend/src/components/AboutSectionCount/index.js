@@ -18,7 +18,7 @@ import {Button} from '../ButtonElements'
 
 
 
-const AboutSection = () => { 
+const AboutSectionCount = () => { 
 
     return (
         <>
@@ -60,4 +60,4 @@ const AboutSection = () => {
     )
 }
 
-export default AboutSection
+export default AboutSectionCount

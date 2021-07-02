@@ -1,13 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import getBlockchain from '../ethereum';
-import SideBar from '../components/SideBar';
-import Nav from '../components/NavBar';
-import HeroSection from '../components/HeroSection';
+import SideBarCount from '../components/SideBarCount';
+import SideBarLive from '../components/SideBarLive';
+import NavBarCount from '../components/NavBarCount';
+import NavBarLive from '../components/NavBarLive';
+import HeroSectionCount from '../components/HeroSectionCount';
+import HeroSectionLive from '../components/HeroSectionLive';
 import Footer from '../components/Footer';
 import ClaimSection from '../components/ClaimSection'
-import AboutSection from '../components/AboutSection';
+import AboutSectionCount from '../components/AboutSectionCount';
+import AboutSectionLive from '../components/AboutSectionLive';
 import WhitepaperSection from '../components/WhitepaperSection';
-import BscSection from '../components/BscSection';
+import BscSectionCount from '../components/BscSectionCount';
+import PancakeSectionLive from '../components/PancakeSectionLive';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +37,12 @@ const Home = () => {
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSeconds, setTimerSeconds] = useState();
-  const [CountIsLIve, setCountIsLive] = useState(true);
+  const [countIsLive, setcountIsLive] = useState(true);
 
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("Jully 17, 2021 00:00:00").getTime();//Jully 17, 2021 00:00:00
+    const countDownDate = new Date("Jully 2, 2021 10:20:00").getTime();//Jully 17, 2021 00:00:00
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -51,7 +56,7 @@ const Home = () => {
 
       if (distance < 0) {
         // Stop Timer
-        setCountIsLive(false);
+        setcountIsLive(false);
         clearInterval(interval);
       } else {
         // Update Timer
@@ -86,42 +91,67 @@ const Home = () => {
 
     return (
         <>
-          <SideBar 
+          {countIsLive ? 
+            <SideBarCount 
+              isOpen={isOpen} 
+              toggle={toggle} 
+            />  : 
+            <SideBarLive 
               isOpen={isOpen} 
               toggle={toggle} 
               claimReward={claimReward}
-              countIsLive={CountIsLIve}
-          />
-          <Nav 
+              countIsLive={countIsLive}
+            />
+          }
+          
+
+          {countIsLive ? 
+            <NavBarCount
+              toggle={toggle} 
+            /> :
+            <NavBarLive 
               toggle={toggle} 
               claimReward={claimReward} 
               connectToMetaMask={connectToMetaMask}
               moth={moth}
-              countIsLive={CountIsLIve}
             />
-            <HeroSection 
-              mothMaster={mothMaster} 
+          }
+
+          {countIsLive ? 
+            <HeroSectionCount 
               timerDays={timerDays} 
               timerHours={timerHours}
               timerMinutes={timerMinutes}
               timerSeconds={timerSeconds}
-              CountIsLIve={CountIsLIve}
-            /> 
-            <AboutSection />
-            <WhitepaperSection />
-            {CountIsLIve ?
-              <></> :
-              <ClaimSection 
-                moth={moth} 
-                mothMaster={mothMaster}
-                claimReward={claimReward} 
-                connectToMetaMask={connectToMetaMask} 
-              />
-            }
-
-            <BscSection />
+            /> :
+            <HeroSectionLive 
+              mothMaster={mothMaster} 
+            />
+          }
+          
+          {countIsLive ? 
+            <AboutSectionCount />:
+            <AboutSectionLive />
+          }
             
-            <Footer />
+          {countIsLive ?
+            <></> :
+            <ClaimSection 
+              moth={moth} 
+              mothMaster={mothMaster}
+              claimReward={claimReward} 
+              connectToMetaMask={connectToMetaMask} 
+            />
+          }
+
+          <WhitepaperSection />
+
+          {countIsLive ? 
+            <BscSectionCount /> :
+            <PancakeSectionLive />
+          }
+            
+          <Footer />
         </>
     )
 };

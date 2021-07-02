@@ -29,7 +29,7 @@ const BscSection = () => {
                         <TextWrapper>
                             <TopLine>Will be available on the Pancake Swap Dex</TopLine>
                             <Heading>The MOTH coin will be availale on the biggest decentralized exchange of the Binance Smart Chain</Heading>
-                            <Subtitle>To get some MOTH coins, you will need to go on the pancake swap website and find the exchange pool for MOTH/BNB</Subtitle>
+                            <Subtitle>To get some MOTH coins, you will need to go on the pancake swap website and find the exchange pool for BNB/MOTH</Subtitle>
                             <Subtitle>Until the coin goes public, you can track it on the Bsc scan</Subtitle>
                             <BtnWrap>
                                 <ButtonLink to={''}
