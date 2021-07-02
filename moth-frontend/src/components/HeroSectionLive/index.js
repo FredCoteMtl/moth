@@ -42,14 +42,19 @@ const HeroSectionLive = ({ mothMaster }) => {
                     <HeroP>
                         {mothMaster === undefined ? 
                             "" : 
-                            mothMaster.toString().slice(0,-18)+ " moths available to claim!"
+                            mothMaster.slice(0,-18)+ " moths available to claim!"
                         }
                     </HeroP>
                     <HeroBtnWraper>
                         <Button 
-                            dark='true'
-                            primary = 'true'
-                            to={''} 
+                            to={'claim'}
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact="true"
+                            primary="true"
+                            dark="true"
+                            dark2="true"
                             onMouseEnter={onHover}
                             onMouseLeave={onHover}>
                             Get started {hover ? <ArrowForward /> : <ArrowRight />}

@@ -32,7 +32,8 @@ const AboutSection = () => {
                             <Subtitle>Moth coin is a fast growing BEP-20 cryptocurrency accessible to everyone.</Subtitle>
                             <Subtitle>A tax of 5% is applyed to every transaction and sent to the moth master. Every day, people can claim their share of the lot according to the size of their moth holdings.</Subtitle>
                             <BtnWrap>
-                                <Button to={'discover'}
+                                <Button 
+                                    to={'discover'}
                                     smooth={true}
                                     duration={500}
                                     spy={true}
