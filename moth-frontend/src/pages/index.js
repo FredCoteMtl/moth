@@ -13,6 +13,7 @@ import WhitepaperSection from '../components/WhitepaperSection';
 import BscSectionCount from '../components/BscSectionCount';
 import PancakeSectionLive from '../components/PancakeSectionLive';
 import MothSection from '../components/MothSection';
+import LogoSection from '../components/LogoSection'
 import { ethers } from 'ethers'
 
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -140,6 +141,8 @@ const Home = () => {
                     mothMaster={mothMaster}
                 />
             }
+
+            <LogoSection />
           
             {countIsLive ? 
                 <AboutSectionCount />:
@@ -164,6 +167,8 @@ const Home = () => {
                 <BscSectionCount /> :
                 <PancakeSectionLive />
             }
+
+            <LogoSection />
             
             <Footer />
         </>

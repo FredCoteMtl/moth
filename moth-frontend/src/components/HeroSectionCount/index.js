@@ -42,7 +42,7 @@ const HeroSectionCount = ({ timerDays, timerHours, timerMinutes, timerSeconds })
                 </HeroBg>
                 <HeroContent>
                     <HeroH1> Follow The Light </HeroH1>
-                    <HeroP>Its comming!</HeroP>
+                    <HeroP>Its coming!</HeroP>
                     <TimerContainer>
                         <TimerValue>
                             <TimerNumber>
