@@ -71,7 +71,7 @@ const Footer = () => {
                         </SocialLogo>
                         <WebsiteRights>
                             moth © {new Date().getFullYear()} All rights reserved. <br />
-                            <ContractCode>0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F</ContractCode>
+                            <ContractCode>0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34</ContractCode>
                             <ContractCode>{'Browser: '+browserName+' '+browserVersion}</ContractCode>
                         </WebsiteRights>
                         <SocialIcons>

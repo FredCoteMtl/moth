@@ -74,6 +74,7 @@ const NavBar = ({
                                     duration={500}
                                     spy={true}
                                     exact='true'
+                                    offset={70}
                                 >
                                     Claim
                                 </NavLinks>

@@ -37,7 +37,7 @@ const Home = () => {
     let interval;
 
     const startTimer = () => {
-        const countDownDate = new Date("Jully 17, 2021 00:00:00").getTime();//Jully 17, 2021 00:00:00
+        const countDownDate = new Date("Jully 17, 2021 08:00:00").getTime();//Jully 17, 2021 00:00:00
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -89,9 +89,13 @@ const Home = () => {
 
     const claimReward = async e => {
         e.preventDefault();
-
-        const tx = await moth.getReward();
-        await tx.wait();
+        try {
+            const tx = await moth.getReward();
+            await tx.wait();
+        } catch (e) {
+            alert('You can only claim once every 24h if you have 100 moths');
+        }
+        
 
         const newMothMaster = await moth.mothMasterBal();
         const userBal = await moth.balanceOf(user.getAddress());

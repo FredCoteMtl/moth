@@ -60,7 +60,7 @@ const HeroSectionLive = ({ mothMaster }) => {
                             Get started {hover ? <ArrowForward /> : <ArrowRight />}
                         </Button>
                     </HeroBtnWraper>
-                    <HeroSmall>Contract address: 0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F</HeroSmall>
+                    <HeroSmall>Contract address: 0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34</HeroSmall>
                 </HeroContent>
             </HeroContainer>  
         </>

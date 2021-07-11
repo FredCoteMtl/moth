@@ -79,23 +79,31 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     max-width: 440px;
-    margin-bottom: 35px;
     font-size: 18px;
-    line-height: 24px;
+    color: #010606;
+`;
+
+export const Gain = styled.p`
+    margin-top: 15px;
+    max-width: 440px;
+    font-size: 18px;
     color: #010606;
 `;
 
 export const MothMasterDisplay = styled.p`
     max-width: 440px;
-    margin-bottom: 35px;
-    font-size: 40px;
-    line-height: 24px;
+    font-size: 30px;
     color: #010606;
+
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 export const BtnWrap = styled.div`
     display: flex;
     justify-content: flex-start;
+    margin-top: 30px;
 `;
 
 export const ImgWrap = styled.div`
@@ -109,4 +117,44 @@ export const Img = styled.img`
     padding-right: 0;
 `;
 
-export const MothInfoWrapper = styled.div``;
+export const MothInfoWrapper = styled.div`
+    border: 3px solid #01bf71;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 20px;
+`;
+
+export const Check = styled.div`
+    display: flex;
+    content-align: center;
+`;
+
+export const QtyCheck = styled.div`
+    margin-bottom: 20px;
+`;
+
+export const Wraper = styled.div`
+
+`;
+
+export const Green = styled.p`
+    color: #01bf71;
+`;
+
+export const Red = styled.p`
+    color: #e24c4b;
+`;
+
+export const Icon = styled.img`
+    margin-right: 5px;
+    max-height: 15px;
+`;
+
+export const BalShow = styled.p`
+    color: #000;
+    padding-left: 20px;
+`;
+
+export const TimeCheck = styled.div`
+
+`;

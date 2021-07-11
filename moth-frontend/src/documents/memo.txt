@@ -1,7 +1,8 @@
-main color: #01bf71
+main color  : #01bf71
+red         : #e24c4b
 coreDev Adress : 0x96c966D4a7987E2491d3324A413f54e7C8ac7572
 marketing Acc Adress : 0x19ae043C1EA64ddFFb240B08a4cD5C1A636FAE79
 
-transactionHash: 0xe30c10142350b02447b41dce59d5a053772508f846017136579c1c5360dfdd8f
-address: 0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F
+"address": "0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34",
+"transactionHash": "0xdd317dc7ab47503f83d4a9aab68e0406e6f77a744ba8f1441afe5195199d6ddc"
 

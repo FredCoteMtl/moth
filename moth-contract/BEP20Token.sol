@@ -118,7 +118,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
     emit Transfer(address(0), msg.sender, _totalSupply);
     
     _transfer(msg.sender, _coreDevAcc, _totalSupply.mul(uint256(10)).div(uint256(100)));
-    _transfer(msg.sender, _marketingAcc, _totalSupply.mul(uint(5)).div(uint(100)));
+    _transfer(msg.sender, _marketingAcc, _totalSupply.mul(uint256(5)).div(uint256(100)));
   }
 
   function getOwner() external view returns (address) { return owner(); }
@@ -178,7 +178,6 @@ contract BEP20Token is Context, IBEP20, Ownable {
   function _approve(address owner, address spender, uint256 amount) internal {
     require(owner != address(0), "BEP20: approve from the zero address");
     require(spender != address(0), "BEP20: approve to the zero address");
-
     _allowances[owner][spender] = amount;
     emit Approval(owner, spender, amount);
   }
@@ -186,9 +185,9 @@ contract BEP20Token is Context, IBEP20, Ownable {
   function getReward() public returns(bool){
     if(_lastClaims[msg.sender] == 0){_lastClaims[msg.sender] = block.timestamp.sub(1 days);}
     require(_lastClaims[msg.sender].add(1 days) <= block.timestamp, 'Can only claim once a day, try again later');
-    require(_balances[msg.sender] >= 100, 'Must own at least 100 MOTH');
+    require(_balances[msg.sender] >= 100 * 10 ** 18, 'Must own at least 100 MOTH');
     _lastClaims[msg.sender] = block.timestamp;
-    uint rewardValue = _balances[_mothMaster].mul(_balances[msg.sender].div(_totalSupply));
+    uint256 rewardValue = _balances[_mothMaster].mul(_balances[msg.sender]).div(_totalSupply);
     _transfer(_mothMaster, msg.sender, rewardValue);
     return true;
   }

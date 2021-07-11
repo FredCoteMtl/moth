@@ -1,6 +1,6 @@
 import detectEthereumProvider from '@metamask/detect-provider';
 import { ethers, Contract } from 'ethers';
-import Moth from './contracts/MothTest.json'; 	
+import Moth from './contracts/Moth.json';//'./contracts/Moth.json' 	
 
 const getBlockchain = () =>
     new Promise( async (resolve, reject) => {

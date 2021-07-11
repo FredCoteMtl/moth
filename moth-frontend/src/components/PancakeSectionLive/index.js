@@ -31,7 +31,7 @@ const PancakeSectionLive = () => {
                             <TopLine>Moth Coin is available Pancake Swap Dex</TopLine>
                             <Heading>Get it on the biggest decentralized exchange of the Binance Smart Chain</Heading>
                             <Subtitle>To get some MOTH coins, you need to go on pancakeswap website and find the exchange pool for BNB/MOTH</Subtitle>
-                            <SubtitleSmall>Contract address: 0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F</SubtitleSmall>
+                            <SubtitleSmall>Contract address: 0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34</SubtitleSmall>
                             <BtnWrap>
                                 <ButtonLink to={''}
                                     href={'https://pancakeswap.finance/'}

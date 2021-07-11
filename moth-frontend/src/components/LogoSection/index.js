@@ -1,11 +1,10 @@
 import React from 'react'         
-import { default as Cake } from '../../images/splash/cake-logo.svg'    
+import { default as Cake } from '../../images/splash/cake-logo-png.png'    
 import { default as Poo } from '../../images/splash/poocoin512.png'    
 import { default as Binance } from '../../images/splash/binance.svg'    
 import { default as Moth } from '../../images/icons/mothGreen.png'    
 import {
     InfoContainer,
-    ImgWrap,
     Img
 } from './LogoSectionElements'
 
