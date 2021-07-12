@@ -2,13 +2,13 @@
 ## contract and frontend
 
 ### INFORMATION
-Contract address: 0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34
-Website: <mothmaster.com>
-
-Name = "moth";
-Symbol = "MOTH";
-Decimals = 18;
-TotalSupply = 400000000000 * 10 ** 18;
+Contract address: 0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34  
+Website: <https://mothmaster.com>  
+  
+Name = "moth";  
+Symbol = "MOTH";  
+Decimals = 18;  
+TotalSupply = 400000000000 * 10 ** 18;  
 
 ### INTRO 
 (from whitepaper)
@@ -27,8 +27,8 @@ There are 2 conditions to claim:
 2. Your last claim was more than 24h ago or it's your first time (if you never claimed before)
 
 Once these 2 conditions are meet, a user can claim his share of the mothmaster acc (the moth balance of the mothmaster is stored at the contracts address). 
-To do this, you can find the contract on the bsc scan at <https://bscscan.com/token/0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F#writeContract> and then go to the getReward() method and call it.
-The other option is to simply go on the <mothmaster.com> website, connect with metamask and hit the claim button.
+To do this, you can find the contract [on the bsc scan](https://bscscan.com/token/0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F#writeContract) and then go to the getReward() method and call it.
+The other option is to simply go on the [mothmaster](https://mothmaster.com) website, connect with metamask and hit the claim button.
 
 the reward is calculated as:
 reward = balance[mothmaster] * balance[user] / totalsupply
