@@ -33,7 +33,7 @@ const BscSection = () => {
                             <Subtitle>Until the coin goes public, you can track it on the Bsc scan</Subtitle>
                             <BtnWrap>
                                 <ButtonLink to={''}
-                                    href={'https://bscscan.com/token/0x10c2358006584C55BB8B0B9A621fFf2c3DF98C3F'}
+                                    href={'https://bscscan.com/token/0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34'}
                                     target='_blank'
                                     exact="true"
                                     primary="true"

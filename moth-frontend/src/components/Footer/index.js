@@ -3,8 +3,6 @@ import WHITEPAPER from '../../documents/WHITEPAPER.pdf';
 import DISCLAIMER from '../../documents/DISCLAIMER.pdf';
 import { 
     FaDiscord,
-    FaFacebookF,
-    FaRedditAlien,
     FaTwitter,
     FaTelegramPlane
 } from 'react-icons/fa'
@@ -26,7 +24,6 @@ import {
 } from "./FooterElements"
 import { browserName, browserVersion } from 'react-device-detect';
 
-
 const Footer = () => {
     return (
         <FooterContainer>
@@ -44,23 +41,17 @@ const Footer = () => {
                         <FooterLinkItem>
                             <FooterLinkTitle>Social Media</FooterLinkTitle>
                             <FooterLink href="https://t.me/joinchat/h7lMawPKhn4xMTRh" target="_blank">Telegram</FooterLink>
+                            <FooterLink href="https://mobile.twitter.com/CoinMoth" target="_blank">Twitter</FooterLink>
                             <FooterLink href="https://discord.gg/TXKKRWZe" target="_blank">Discord</FooterLink>
-                            <FooterLink href="/">Reddit</FooterLink>
-                            <FooterLink href="/">Twitter</FooterLink>
-                            <FooterLink href="/">Facebook</FooterLink>
-                        </FooterLinkItem>
-                        <FooterLinkItem>
-                            <FooterLinkTitle>Join the team</FooterLinkTitle>
-                            <FooterLink href="https://t.me/joinchat/FpDvuTo-q6A0YTVh" target="_blank">Marketing</FooterLink>
-                            <FooterLink href="https://t.me/joinchat/FpDvuTo-q6A0YTVh" target="_blank">Youtuber</FooterLink>
-                            <FooterLink href="https://t.me/joinchat/FpDvuTo-q6A0YTVh" target="_blank">Graphic designer</FooterLink>
-                            <FooterLink href="https://t.me/joinchat/FpDvuTo-q6A0YTVh" target="_blank">Web dev</FooterLink>
-                            <FooterLink href="https://t.me/joinchat/FpDvuTo-q6A0YTVh" target="_blank">Influencer</FooterLink>
+                            <FooterLink href="https://t.me/joinchat/FpDvuTo-q6A0YTVh" target="_blank">Join the team</FooterLink>
+                            <FooterLink href='https://drive.google.com/file/d/1jUUXb3Y-3Els-wv5_VfmxoHMl6rMFW5V/view'>Download icon</FooterLink>
                         </FooterLinkItem>
                         <FooterLinkItem>
                             <FooterLinkTitle>Sources</FooterLinkTitle>
                             <FooterLink href="https://undraw.co/illustrations" target="_blank">unDraw</FooterLink>
                             <FooterLink href="https://www.flaticon.com/free-icon/moth_1357433?term=moth&page=1&position=16&page=1&position=16&related_id=1357433&origin=search" target="_blank">Icon</FooterLink>
+                            <FooterLink href="https://unsplash.com" target="_blank">unsplash</FooterLink>
+                            <FooterLink href="https://cryptologos.cc" target="_blank">crypto logos</FooterLink>
                         </FooterLinkItem>
                     </FooterLinksWraper>
                 </FooterLinksContainer>
@@ -78,14 +69,8 @@ const Footer = () => {
                             <SocialIconLink href="https://t.me/joinchat/h7lMawPKhn4xMTRh" target="_blank" aria-label="Telegram">
                                 <FaTelegramPlane />
                             </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-                                <FaFacebookF />
-                            </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" aria-label="Twitter">
+                            <SocialIconLink href="https://mobile.twitter.com/CoinMoth" target="_blank" aria-label="Twitter">
                                 <FaTwitter />
-                            </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" aria-label="Reddit">
-                                <FaRedditAlien />
                             </SocialIconLink>
                             <SocialIconLink href="https://discord.gg/TXKKRWZe" target="_blank" aria-label="Discord">
                                 <FaDiscord />

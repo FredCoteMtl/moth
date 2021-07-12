@@ -13,7 +13,8 @@ import WhitepaperSection from '../components/WhitepaperSection';
 import BscSectionCount from '../components/BscSectionCount';
 import PancakeSectionLive from '../components/PancakeSectionLive';
 import MothSection from '../components/MothSection';
-import LogoSection from '../components/LogoSection'
+import LogoSection from '../components/LogoSection';
+import CreatorSection from '../components/CreatorSection';
 import { ethers } from 'ethers'
 
 import detectEthereumProvider from '@metamask/detect-provider';
@@ -37,7 +38,7 @@ const Home = () => {
     let interval;
 
     const startTimer = () => {
-        const countDownDate = new Date("Jully 17, 2021 08:00:00").getTime();//Jully 17, 2021 00:00:00
+        const countDownDate = new Date("Jully 17, 2021 00:00:00").getTime();//Jully 17, 2021 00:00:00
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -171,6 +172,8 @@ const Home = () => {
                 <BscSectionCount /> :
                 <PancakeSectionLive />
             }
+
+            <CreatorSection />
 
             <LogoSection />
             
