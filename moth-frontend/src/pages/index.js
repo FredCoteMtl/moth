@@ -38,7 +38,7 @@ const Home = () => {
     let interval;
 
     const startTimer = () => {
-        const countDownDate = new Date("Jully 17, 2021 00:00:00").getTime();//Jully 17, 2021 00:00:00
+        const countDownDate = new Date(Date.UTC(2021, 6, 17, 4, 0, 0, 0)).getTime();//Jully 17, 2021 00:00:00
 
         interval = setInterval(() => {
             const now = new Date().getTime();
@@ -69,23 +69,27 @@ const Home = () => {
 
     const connectToMetaMask = async e => {
         e.preventDefault();
+        try {
+            const { moth } = await getBlockchain();
+            setMoth(moth);
 
-        const { moth } = await getBlockchain();
-        setMoth(moth);
-
-        let provider = await detectEthereumProvider();
-        await provider.request({ method: 'eth_requestAccounts' });
-        provider = new ethers.providers.Web3Provider(provider);
-        const signer = provider.getSigner();
-        setUser(signer);
+            let provider = await detectEthereumProvider();
+            await provider.request({ method: 'eth_requestAccounts' });
+            provider = new ethers.providers.Web3Provider(provider);
+            const signer = provider.getSigner();
+            setUser(signer);
+            
+            const mothMaster = await moth.mothMasterBal();
+            const userBal = await moth.balanceOf(signer.getAddress());
+            const lastClaim = await moth.lastClaimOf(signer.getAddress());
+            
+            setMothMaster(mothMaster.toString());
+            setUserBal(userBal.toString());
+            setLastClaim(lastClaim.toString());
+        } catch (e) {
+            alert('Make sure you are trying to connect to the bsc smart chain (other chains wont work)');
+        }
         
-        const mothMaster = await moth.mothMasterBal();
-        const userBal = await moth.balanceOf(signer.getAddress());
-        const lastClaim = await moth.lastClaimOf(signer.getAddress());
-        
-        setMothMaster(mothMaster.toString());
-        setUserBal(userBal.toString());
-        setLastClaim(lastClaim.toString());
     };
 
     const claimReward = async e => {
