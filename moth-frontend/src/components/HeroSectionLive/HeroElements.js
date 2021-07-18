@@ -89,7 +89,7 @@ export const HeroP = styled.p`
     color: #fff;
     font-size: 24px;
     text-align: center;
-    max-width: 600px;
+    max-width: 800px;
 
     @media screen and (max-width: 768px) {
         font-size: 24px;
@@ -163,4 +163,37 @@ export const HeroSmall = styled.small`
     @media screen and (max-width: 768px) {
         font-size: 50%;
     }
+`;
+
+export const RewardContainer = styled.div`
+    margin-top: 30px;
+    border: 1px solid #01bf71;
+    border-radius: 3px;
+    margin-top: 3em;
+    padding: 3em;
+    text-align: center;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        padding: 1em;
+    }
+`;
+
+export const RChow = styled.small`
+    color: white;
+`;
+
+export const RCpercent = styled.p`
+    color: #01bf71;
+    font-size: 3em;
+    font-weight: bold;
+`;
+
+export const RCtext = styled.p`
+    color: #01bf71;
+`;
+
+export const Link = styled.a`
+    color: #01bf71;
+    cursor: pointer;
 `;

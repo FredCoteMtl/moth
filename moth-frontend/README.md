@@ -1,4 +1,4 @@
-This Sectionof the project only contains the frontend app.
+This Section of the project only contains the frontend app.
 
 This app is made using react and is connected to the blockchain using Ethers.
 

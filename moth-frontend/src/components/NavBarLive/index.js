@@ -58,7 +58,6 @@ const NavBar = ({
                                 to='about'
                                 smoth='true'
                                 duration={500}
-                                spy={true}
                                 exact='true'
                                 offset={-20}
                             >
@@ -72,9 +71,8 @@ const NavBar = ({
                                     to='claim'
                                     smoth='true'
                                     duration={500}
-                                    spy={true}
                                     exact='true'
-                                    offset={70}
+                                    offset={35}
                                 >
                                     Claim
                                 </NavLinks>
@@ -85,8 +83,8 @@ const NavBar = ({
                                 to='whitepaper'
                                 smoth='true'
                                 duration={500}
-                                spy={true}
                                 exact='true'
+                                offset={35}
                             >
                                 Whitepaper
                             </NavLinks>
@@ -96,7 +94,6 @@ const NavBar = ({
                                 to='discover'
                                 smoth='true'
                                 duration={500}
-                                spy={true}
                                 exact='true'
                                 offset={30}
                             >

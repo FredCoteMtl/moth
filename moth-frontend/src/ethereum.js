@@ -10,11 +10,18 @@ const getBlockchain = () =>
             const networkId = await provider.request({ method: 'net_version' })
             provider = new ethers.providers.Web3Provider(provider);
             const signer = provider.getSigner();
-            const moth = new Contract(
-                Moth.networks[networkId].address, 	
-                Moth.abi,										
-                signer
-            );
+            let moth = undefined;
+            try {
+                moth = new Contract(
+                    Moth.networks[networkId].address, 	
+                    Moth.abi,										
+                    signer
+                );
+            } catch (TypeError) {}
+            if(moth === undefined){
+                alert('Try again with Binance Smart Chain!')
+                reject('Try again with Binance Smart Chain!');
+            }
             resolve({moth});									
             return;
         }

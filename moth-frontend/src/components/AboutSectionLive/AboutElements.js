@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
-    padding-top: 200px;
+    padding-top: 150px;
     color: #fff;
     background: #010606;
 
@@ -86,6 +86,7 @@ export const Subtitle = styled.p`
 `;
 
 export const BtnWrap = styled.div`
+    margin-top: 25px;
     display: flex;
     justify-content: flex-start;
 `;
@@ -93,10 +94,19 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
+    padding-top: 15%;
 `;
 
 export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+`;
+
+export const SubtitleSmall = styled.small`
+    color: #fff;
+
+    @media screen and (max-width: 768px) {
+        font_size: 50%;
+    }
 `;

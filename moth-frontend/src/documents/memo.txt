@@ -6,3 +6,4 @@ marketing Acc Adress : 0x19ae043C1EA64ddFFb240B08a4cD5C1A636FAE79
 "address": "0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34",
 "transactionHash": "0xdd317dc7ab47503f83d4a9aab68e0406e6f77a744ba8f1441afe5195199d6ddc"
 
+locking-tx 0x5a9c352950da3e7e0f2219bcd66f5dbc551d18659c6e054c7e0a4d3739f20acd

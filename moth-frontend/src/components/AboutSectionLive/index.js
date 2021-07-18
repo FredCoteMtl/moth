@@ -11,10 +11,11 @@ import {
     ImgWrap,
     Img,
     InfoWrapper,
-    BtnWrap
+    BtnWrap,
+    SubtitleSmall
 } from './AboutElements'
 import { default as Yacht } from '../../images/splash/Yacht.svg'
-import {Button} from '../ButtonElements'
+import {ButtonLink} from '../ButtonElements'
 
 
 
@@ -31,19 +32,19 @@ const AboutSection = () => {
                             <Heading>The Moth Coin is live on Pancakeswap</Heading>
                             <Subtitle>Moth coin is a fast growing BEP-20 cryptocurrency accessible to everyone.</Subtitle>
                             <Subtitle>A tax of 5% is applyed to every transaction and sent to the moth master. Every day, people can claim their share of the lot according to the size of their moth holdings.</Subtitle>
+                            <Subtitle>To get some MOTH coins, you need to go on pancakeswap website and find the exchange pool for BNB/MOTH</Subtitle>
+                            <SubtitleSmall>Contract address: 0x151F29E356657c9ab3c5b953CE2a6af68f81Ed34</SubtitleSmall>
                             <BtnWrap>
-                                <Button 
-                                    to={'discover'}
-                                    smooth={true}
-                                    duration={500}
-                                    spy={true}
+                                <ButtonLink to={''}
+                                    href={'https://pancakeswap.finance/'}
+                                    target='_blank'
                                     exact="true"
                                     primary="true"
                                     dark="true"
                                     dark2="true"
                                 >
-                                    Get it on pancakeswap
-                                </Button>
+                                    Go to Pancakeswap
+                                </ButtonLink>
                             </BtnWrap>
                         </TextWrapper>
                     </Column1>

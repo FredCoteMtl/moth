@@ -14,7 +14,7 @@ const CreatorSection = () => {
         <InfoContainer>
             <TextWrapper>
                 <TopLine>MEET THE CREATOR</TopLine>
-                <Subtitle>This project was made by <Git href={'https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-c%C3%B4t%C3%A9-74373a185/'} target={'_blank'}>Frederic Cote (Nakamoth)</Git></Subtitle>
+                <Subtitle>This project was made by Frederic Cote (Nakamoth)</Subtitle>
                 <Subtitle>I am a CS student at University of Montreal. If you need someone to code some solidity smart contracts or make a frontend for a project, I'm the guy you are looking for!</Subtitle>
                 <Subtitle>You can find more of my projects <Git href={'https://github.com/FredCoteMtl'} target={'_blank'}>on Github</Git></Subtitle>
                 <Subtitle>To contact me (creator): <u>fredcote-_-@hotmail.com</u></Subtitle>
