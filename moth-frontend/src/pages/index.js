@@ -9,7 +9,6 @@ import WhitepaperSection from '../components/WhitepaperSection';
 import DiscoverSection from '../components/DiscoverSection';
 import MothSection from '../components/MothSection';
 import LogoSection from '../components/LogoSection';
-import CreatorSection from '../components/CreatorSection';
 import { ethers } from 'ethers'
 import detectEthereumProvider from '@metamask/detect-provider';
 
@@ -121,8 +120,6 @@ const Home = () => {
             <WhitepaperSection />
 
             <DiscoverSection />
-
-            <CreatorSection />
 
             <LogoSection />
             
